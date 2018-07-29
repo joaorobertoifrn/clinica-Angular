@@ -6,6 +6,12 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { ControlsidebarComponent } from './controlsidebar/controlsidebar.component';
+import { HomeComponent } from './home/home.component';
+import { PacienteComponent } from './paciente/paciente.component';
+import { ProfissionalComponent } from './profissional/profissional.component';
+import { LocalatendimentoComponent } from './localatendimento/localatendimento.component';
+import { EspecialidadeComponent } from './especialidade/especialidade.component';
+import { UsuarioComponent } from './usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +19,13 @@ import { ControlsidebarComponent } from './controlsidebar/controlsidebar.compone
     HeaderComponent,
     FooterComponent,
     SidemenuComponent,
-    ControlsidebarComponent
+    ControlsidebarComponent,
+    HomeComponent,
+    PacienteComponent,
+    ProfissionalComponent,
+    LocalatendimentoComponent,
+    EspecialidadeComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule

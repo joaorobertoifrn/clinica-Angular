@@ -24,13 +24,21 @@
         "../node_modules/font-awesome/css/font-awesome.min.css",
         "../node_modules/admin-lte/dist/css/AdminLTE.min.css",
         "../node_modules/ionicons/dist/css/ionicons.min.css",
+        "../node_modules/admin-lte/plugins/datatables/dataTables.bootstrap.css",
         "../node_modules/admin-lte/dist/css/skins/skin-blue.min.css",
         "../node_modules/admin-lte/plugins/iCheck/flat/blue.css"
+
       ],
       "scripts": [
         "../node_modules/admin-lte/plugins/jQuery/jquery-2.2.3.min.js",
         "../node_modules/admin-lte/bootstrap/js/bootstrap.min.js",
-        "../node_modules/admin-lte/dist/js/app.min.js"
+        "../node_modules/admin-lte/plugins/datatables/jquery.dataTables.min.js",
+        "../node_modules/admin-lte/plugins/datatables/dataTables.bootstrap.min.js",
+        "../node_modules/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js",
+        "../node_modules/admin-lte/plugins/fastclick/fastclick.js",
+        "../node_modules/admin-lte/dist/js/app.min.js",
+        "script-tabela.js"
+
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
