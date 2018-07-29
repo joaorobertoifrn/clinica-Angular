@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'cli-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
-export class AppComponent {
-  title = 'cli';
+export class AppComponent implements OnInit {
+
+  content = 'Welcome do Meat App!'
+
+  constructor() { }
+
+  ngOnInit() {
+  }
 }
