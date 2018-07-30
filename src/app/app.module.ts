@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -14,6 +14,7 @@ import { LocalatendimentoComponent } from './localatendimento/localatendimento.c
 import { EspecialidadeComponent } from './especialidade/especialidade.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { RouterModule } from '../../node_modules/@angular/router';
+import { LoginComponent } from './security/login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RouterModule } from '../../node_modules/@angular/router';
     ProfissionalComponent,
     LocalatendimentoComponent,
     EspecialidadeComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

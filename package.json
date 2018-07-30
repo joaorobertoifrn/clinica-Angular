@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "4.4.4",
     "@angular/router": "4.4.4",
     "admin-lte": "2.3.11",
+    "angular-alert-module": "^2.0.3",
     "angular2-jwt": "^0.2.3",
     "core-js": "2.5.7",
     "font-awesome": "4.7.0",
