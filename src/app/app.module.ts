@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/http';
+import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -12,6 +13,7 @@ import { ProfissionalComponent } from './profissional/profissional.component';
 import { LocalatendimentoComponent } from './localatendimento/localatendimento.component';
 import { EspecialidadeComponent } from './especialidade/especialidade.component';
 import { UsuarioComponent } from './usuario/usuario.component';
+import { RouterModule } from '../../node_modules/@angular/router';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { UsuarioComponent } from './usuario/usuario.component';
     UsuarioComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]

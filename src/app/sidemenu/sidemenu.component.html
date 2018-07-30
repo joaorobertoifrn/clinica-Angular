@@ -38,10 +38,10 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#">Paciente</a></li>
-          <li><a href="#">Profissional</a></li>
-          <li><a href="#">Local Atendimento</a></li>
-          <li><a href="#">Especialidades</a></li>
+          <li routerLinkActive="active" ><a [routerLink]="['/paciente']">Paciente</a></li>
+          <li routerLinkActive="active" ><a [routerLink]="['/profissional']">Profissional</a></li>
+          <li routerLinkActive="active" ><a [routerLink]="['/localatendimento']">Local Atendimento</a></li>
+          <li routerLinkActive="active" ><a [routerLink]="['/especialidade']">Especialidades</a></li>
         </ul>
       </li>
 
@@ -52,8 +52,8 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#">Agendamento</a></li>
-          <li><a href="#">Marcação Consulta</a></li>
+          <li routerLinkActive="active" ><a [routerLink]="['/']">Agendamento</a></li>
+          <li routerLinkActive="active" ><a [routerLink]="['/']">Marcação Consulta</a></li>
         </ul>
       </li>
 
@@ -64,8 +64,8 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#">Usuário</a></li>
-          <li><a href="#">Configuração</a></li>
+          <li routerLinkActive="active" ><a [routerLink]="['/usuario']">Usuário</a></li>
+          <li routerLinkActive="active" ><a [routerLink]="['/']">Configuração</a></li>
         </ul>
       </li>
 
