@@ -15,6 +15,7 @@ import { EspecialidadeComponent } from './especialidade/especialidade.component'
 import { UsuarioComponent } from './usuario/usuario.component';
 import { RouterModule } from '../../node_modules/@angular/router';
 import { LoginComponent } from './security/login/login.component';
+import { UtilModule } from './util/util.module';
 
 @NgModule({
   declarations: [
@@ -30,10 +31,11 @@ import { LoginComponent } from './security/login/login.component';
     EspecialidadeComponent,
     UsuarioComponent,
     LoginComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    UtilModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [],
