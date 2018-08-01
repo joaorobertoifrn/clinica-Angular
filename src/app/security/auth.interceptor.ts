@@ -11,7 +11,8 @@ export class AuthInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const loginService = this.injector.get(LoginService);
     if (loginService.isLogado()) {
-      const authRequest = request.clone({setHeaders:{'Authorization': `Bearer ${this.loginService.user.accessToken}`}});
+      const authRequest = request.clone(
+        {setHeaders: {'Authorization': `Bearer ${loginService.user.accessToken}`}});
       return next.handle(authRequest);
     } else {
       return next.handle(request);
