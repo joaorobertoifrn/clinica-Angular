@@ -31,6 +31,7 @@
               {"input":"node_modules/admin-lte/bower_components/bootstrap/dist/css/bootstrap.min.css"},
               {"input":"node_modules/admin-lte/bower_components/font-awesome/css/font-awesome.min.css"},
               {"input":"node_modules/admin-lte/bower_components/Ionicons/css/ionicons.min.css"},
+              {"input":"node_modules/admin-lte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"},
               {"input":"node_modules/admin-lte/dist/css/AdminLTE.min.css"},
               {"input":"node_modules/admin-lte/bower_components/morris.js/morris.css"},
               {"input":"node_modules/admin-lte/bower_components/jvectormap/jquery-jvectormap.css"},
@@ -43,6 +44,8 @@
               {"input":"node_modules/admin-lte/bower_components/jquery/dist/jquery.min.js"},
               {"input":"node_modules/admin-lte/bower_components/jquery-ui/jquery-ui.min.js"},
               {"input":"node_modules/admin-lte/bower_components/bootstrap/dist/js/bootstrap.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/datatables.net/js/jquery.dataTables.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"},
               {"input":"node_modules/admin-lte/bower_components/raphael/raphael.min.js"},
               {"input":"node_modules/admin-lte/bower_components/morris.js/morris.min.js"},
               {"input":"node_modules/admin-lte/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"},
@@ -57,7 +60,8 @@
               {"input":"node_modules/admin-lte/bower_components/fastclick/lib/fastclick.js"},
               {"input":"node_modules/admin-lte/dist/js/adminlte.min.js"},
               {"input":"node_modules/admin-lte/dist/js/pages/dashboard.js"},
-              {"input":"node_modules/admin-lte/dist/js/demo.js"}
+              {"input":"node_modules/admin-lte/dist/js/demo.js"},
+              {"input":"src/script-tabela.js"}
             ]
           },
           "configurations": {
@@ -108,6 +112,7 @@
               {"input":"node_modules/admin-lte/bower_components/bootstrap/dist/css/bootstrap.min.css"},
               {"input":"node_modules/admin-lte/bower_components/font-awesome/css/font-awesome.min.css"},
               {"input":"node_modules/admin-lte/bower_components/Ionicons/css/ionicons.min.css"},
+              {"input":"node_modules/admin-lte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"},
               {"input":"node_modules/admin-lte/dist/css/AdminLTE.min.css"},
               {"input":"node_modules/admin-lte/bower_components/morris.js/morris.css"},
               {"input":"node_modules/admin-lte/bower_components/jvectormap/jquery-jvectormap.css"},
@@ -120,6 +125,8 @@
               {"input":"node_modules/admin-lte/bower_components/jquery/dist/jquery.min.js"},
               {"input":"node_modules/admin-lte/bower_components/jquery-ui/jquery-ui.min.js"},
               {"input":"node_modules/admin-lte/bower_components/bootstrap/dist/js/bootstrap.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/datatables.net/js/jquery.dataTables.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"},
               {"input":"node_modules/admin-lte/bower_components/raphael/raphael.min.js"},
               {"input":"node_modules/admin-lte/bower_components/morris.js/morris.min.js"},
               {"input":"node_modules/admin-lte/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"},
@@ -134,7 +141,8 @@
               {"input":"node_modules/admin-lte/bower_components/fastclick/lib/fastclick.js"},
               {"input":"node_modules/admin-lte/dist/js/adminlte.min.js"},
               {"input":"node_modules/admin-lte/dist/js/pages/dashboard.js"},
-              {"input":"node_modules/admin-lte/dist/js/demo.js"}
+              {"input":"node_modules/admin-lte/dist/js/demo.js"},
+              {"input":"src/script-tabela.js"}
             ],
             "assets": [
               {
