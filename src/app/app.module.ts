@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
@@ -12,7 +12,7 @@ import { ProfissionalComponent } from './models/profissional/profissional.compon
 import { LocalatendimentoComponent } from './models/localatendimento/localatendimento.component';
 import { EspecialidadeComponent } from './models/especialidade/especialidade.component';
 import { UsuarioComponent } from './models/usuario/usuario.component';
-import { RouterModule } from '../../node_modules/@angular/router';
+import { RouterModule, PreloadAllModules } from '../../node_modules/@angular/router';
 import { LoginComponent } from './security/login/login.component';
 import { UtilModule } from './util/util.module';
 
@@ -33,10 +33,10 @@ import { UtilModule } from './util/util.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    UtilModule,
-    RouterModule.forRoot(ROUTES)
+    UtilModule.forRoot(),
+    RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules})
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
