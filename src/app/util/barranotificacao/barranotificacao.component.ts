@@ -21,8 +21,8 @@ import 'rxjs/add/operator/switchMap';
         opacity: 1,
         bottom: '30px'
       })),
-      transition('hidden => visible', animate('500ms 0s ease-in')),
-      transition('visible => hidden', animate('500ms 0s ease-out'))
+      transition('hidden => visible', animate('800ms 0s ease-in')),
+      transition('visible => hidden', animate('800ms 0s ease-out'))
     ])
   ]
 })
@@ -39,7 +39,7 @@ export class BarranotificacaoComponent implements OnInit {
       .do(message => {
         this.message = message;
         this.barranotificacaoVisibility = 'visible';
-    }).switchMap(message => Observable.timer(3000))
+    }).switchMap(message => Observable.timer(5000))
       .subscribe(timer => this.barranotificacaoVisibility = 'hidden');
   }
 

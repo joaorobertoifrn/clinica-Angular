@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Dashboard } from '../../../models/dashboard.model';
+import { DashboardService } from '../../../services/dashboard.service';
 
 @Component({
   selector: 'cli-home',
@@ -6,11 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  content = 'Conteúdo da Pagina Home';
+  dash: Dashboard;
 
-  constructor() { }
+  constructor(public dashboardService: DashboardService) { }
 
   ngOnInit() {
+    this.dashboardService.findAll()
+      .subscribe(response => {
+        this.dash = response as Dashboard;
+      },
+      error => {});
   }
 
 }

@@ -1,0 +1,168 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Convênio
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+      <a href="#">
+        <i class="fa fa-dashboard"></i> Level</a>
+    </li>
+    <li class="active">Convênio</li>
+  </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+  <!-- Info boxes -->
+  <div class="row">
+    <div class="col-md-4 col-sm-7 col-xs-12">
+      <div class="info-box">
+        <span class="info-box-icon bg-aqua">
+          <i class="ion ion-ios-gear-outline"></i>
+        </span>
+        <div class="info-box-content">
+          <span class="info-box-text">Total Convênios</span>
+          <span class="info-box-number">{{QtdConvenios}}
+            <small></small>
+          </span>
+        </div>
+        <!-- /.info-box-content -->
+      </div>
+      <!-- /.info-box -->
+    </div>
+    <button type="button" class="btn btn-primary btn-flat waves-effect waves-light" data-toggle="modal" data-target="#modal-cadastro">
+      Cadastrar
+    </button>
+  </div>
+  <!-- /.Modal-Deletar -->
+  <div class="modal fade" id="modal-delete">
+      <div class="modal-dialog">
+        <form method="delete">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title">Deletar Convênio</h4>
+            </div>
+            <div class="modal-body">
+              <span>Tem certeza que deseja apagar o registro?</span>
+
+              <p>{{convenio?.id}} - {{convenio?.nome}}</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+              <button type="submit" (click)="deletarConvenio(convenio.id)" class="btn btn-danger" data-dismiss="modal">Confirmar</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </form>
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.Modal-Deletar -->
+
+  <!-- /.Modal-Cadastro -->
+  <div class="modal fade" id="modal-cadastro">
+    <div class="modal-dialog">
+      <form [formGroup]="convenioForm" method="post">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">Convênio</h4>
+          </div>
+          <div class="modal-body">
+            <input formControlName="id" type="text" hidden>
+            <cli-input-container>
+              <label stacked>Nome*</label>
+              <input formControlName="nome" type="text" class="form-control" placeholder="nome">
+            </cli-input-container>
+            <cli-input-container>
+              <label stacked>Email*</label>
+              <input formControlName="email" type="email" class="form-control" placeholder="Email">
+            </cli-input-container>
+            <cli-input-container>
+              <label stacked>CNPJ*</label>
+              <input formControlName="cnpj" type="text" class="form-control" placeholder="cnpj">
+            </cli-input-container>
+            <cli-input-container>
+              <label stacked>Razão Social*</label>
+              <input formControlName="razaoSocial" type="text" class="form-control" placeholder="Razão Social">
+            </cli-input-container>
+            <cli-input-container>
+              <label stacked>Registro ANS*</label>
+              <input formControlName="registroANS" type="text" class="form-control" placeholder="Registro ANS">
+            </cli-input-container>
+            <cli-input-container>
+              <label stacked>Código CNS*</label>
+              <input formControlName="codigoCNS" type="text" class="form-control" placeholder="Código CNS">
+            </cli-input-container>
+            <cli-input-container>
+              <label stacked>Telefone*</label>
+              <input formControlName="telefone" type="text" class="form-control" placeholder="Telefone">
+            </cli-input-container>
+            <cli-input-container>
+              <label stacked>Período de Retorno*</label>
+              <input formControlName="periodoRetorno" type="text" class="form-control" placeholder="Período de Retorno">
+            </cli-input-container>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cancelar</button>
+            <button type="submit" [disabled]="convenioForm.invalid" (click)="cadastrarConvenio()" class="btn btn-primary" data-dismiss="modal">Salvar</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </form>
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.Modal-Cadastro -->
+
+  <!-- /.row -->
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-body">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>CNPJ</th>
+                <th>Nome</th>
+                <th>Registro ANS</th>
+                <th>Telefone</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let convenio of convenios">
+                <td>{{ convenio.id }}</td>
+                <td>{{ convenio.cnpj }}</td>
+                <td>{{ convenio.nome }}</td>
+                <td>{{ convenio.registroANS }}</td>
+                <td>{{ convenio.telefone }}</td>
+                <td class="text-center">
+                  <a class="btn btn-link btn-xs" (click)="carregarConvenio(convenio.id)" data-toggle="modal" data-target="#modal-cadastro">
+                    <span class="fa fa-pencil-square-o"></span>
+                  </a>
+                  <a class="btn btn-link btn-xs" (click)="carregarConvenio(convenio.id)" data-toggle="modal" data-target="#modal-delete">
+                    <span class="fa fa-times-circle"></span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+</section>
+<!-- /.content -->

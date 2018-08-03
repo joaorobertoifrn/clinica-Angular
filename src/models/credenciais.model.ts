@@ -1,7 +1,4 @@
-import { Pessoa } from './pessoa.model';
-
-export interface Credenciais extends Pessoa {
+export interface Credenciais {
   email: string;
   senha: string;
-  accessToken: string;
 }

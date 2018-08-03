@@ -59,7 +59,6 @@
               {"input":"node_modules/admin-lte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"},
               {"input":"node_modules/admin-lte/bower_components/fastclick/lib/fastclick.js"},
               {"input":"node_modules/admin-lte/dist/js/adminlte.min.js"},
-              {"input":"node_modules/admin-lte/dist/js/pages/dashboard.js"},
               {"input":"node_modules/admin-lte/dist/js/demo.js"},
               {"input":"src/script-tabela.js"}
             ]
@@ -140,7 +139,6 @@
               {"input":"node_modules/admin-lte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"},
               {"input":"node_modules/admin-lte/bower_components/fastclick/lib/fastclick.js"},
               {"input":"node_modules/admin-lte/dist/js/adminlte.min.js"},
-              {"input":"node_modules/admin-lte/dist/js/pages/dashboard.js"},
               {"input":"node_modules/admin-lte/dist/js/demo.js"},
               {"input":"src/script-tabela.js"}
             ],

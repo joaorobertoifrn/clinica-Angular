@@ -12,9 +12,10 @@ import { ProfissionalComponent } from './models/profissional/profissional.compon
 import { LocalatendimentoComponent } from './models/localatendimento/localatendimento.component';
 import { EspecialidadeComponent } from './models/especialidade/especialidade.component';
 import { UsuarioComponent } from './models/usuario/usuario.component';
-import { RouterModule, PreloadAllModules } from '../../node_modules/@angular/router';
+import { RouterModule, PreloadAllModules } from '@angular/router';
 import { LoginComponent } from './security/login/login.component';
 import { UtilModule } from './util/util.module';
+import { ConvenioComponent } from './models/convenio/convenio.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +29,14 @@ import { UtilModule } from './util/util.module';
     LocalatendimentoComponent,
     EspecialidadeComponent,
     UsuarioComponent,
-    LoginComponent
+    LoginComponent,
+    ConvenioComponent
     ],
   imports: [
     BrowserModule,
     HttpClientModule,
     UtilModule.forRoot(),
-    RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules})
+    RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules, onSameUrlNavigation: 'reload'})
   ],
   providers: [{provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]

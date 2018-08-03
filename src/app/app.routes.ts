@@ -1,3 +1,4 @@
+import { ConvenioComponent } from './models/convenio/convenio.component';
 import { LoginComponent } from './security/login/login.component';
 import { Routes } from '@angular/router';
 import { HomeComponent } from './template/home/home.component';
@@ -14,5 +15,6 @@ export const ROUTES: Routes = [
     { path: 'profissional', component: ProfissionalComponent },
     { path: 'localatendimento', component: LocalatendimentoComponent },
     { path: 'especialidade', component: EspecialidadeComponent },
+    { path: 'convenio', component: ConvenioComponent },
     { path: 'usuario', component: UsuarioComponent }
 ];

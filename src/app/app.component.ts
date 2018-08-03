@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'cli-root',
@@ -6,8 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  constructor() { }
+  emailUser: string;
+
+  constructor(public storage: StorageService) { }
 
   ngOnInit() {
+    const localUser = this.storage.getLocalUser();
+    if (localUser) {
+      this.emailUser = localUser.email;
+    } else {
+      this.emailUser = '';
+    }
   }
 }

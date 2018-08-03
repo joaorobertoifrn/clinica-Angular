@@ -9,6 +9,9 @@ import { NotificationService } from './messages/notification.service';
 import { BarranotificacaoComponent } from './barranotificacao/barranotificacao.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from '../security/auth.interceptor';
+import { StorageService } from '../../services/storage.service';
+import { ConvenioService } from '../../services/convenio.service';
+import { DashboardService } from '../../services/dashboard.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ export class UtilModule {
     return {
       ngModule: UtilModule,
       providers: [
+        DashboardService,
+        StorageService,
         LoginService,
+        ConvenioService,
         NotificationService,
         {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
       ]
