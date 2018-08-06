@@ -1,3 +1,7 @@
+import { LocalAtendimentoService } from './../../services/localatendimento.service';
+import { ProfissionalService } from './../../services/profissional.service';
+import { PacienteService } from './../../services/paciente.service';
+import { EspecialidadeService } from './../../services/especialidade.service';
 import {NgModule, ModuleWithProviders} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -43,6 +47,10 @@ export class UtilModule {
         StorageService,
         LoginService,
         ConvenioService,
+        EspecialidadeService,
+        PacienteService,
+        ProfissionalService,
+        LocalAtendimentoService,
         NotificationService,
         {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
       ]
