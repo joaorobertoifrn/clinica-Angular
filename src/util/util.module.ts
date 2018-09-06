@@ -12,7 +12,7 @@ import { LoginService } from '../../services/login.service';
 import { NotificationService } from './messages/notification.service';
 import { BarranotificacaoComponent } from './barranotificacao/barranotificacao.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AuthInterceptor } from '../security/auth.interceptor';
+import { AuthInterceptor } from '../../interceptors/auth.interceptor';
 import { StorageService } from '../../services/storage.service';
 import { ConvenioService } from '../../services/convenio.service';
 import { DashboardService } from '../../services/dashboard.service';

@@ -7,9 +7,9 @@ import {
   HTTP_INTERCEPTORS
 } from '@angular/common/http';
 import { Observable } from 'rxjs/Rx'; // IMPORTANTE: IMPORT ATUALIZADO
-import { StorageService } from '../../services/storage.service';
-import { API_CONFIG } from '../../config/api.config';
-import { LoginService } from '../../services/login.service';
+import { StorageService } from '../services/storage.service';
+import { API_CONFIG } from '../config/api.config';
+import { LoginService } from '../services/login.service';
 import { Router } from '@angular/router';
 
 @Injectable()
