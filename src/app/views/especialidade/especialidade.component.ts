@@ -1,7 +1,7 @@
 import { EspecialidadeService } from './../../../services/especialidade.service';
 import { Especialidade } from './../../../models/especialidade.model';
 import { LoginService } from '../../../services/login.service';
-import { NotificationService } from '../../util/messages/notification.service';
+import { NotificationService } from './../../../util/messages/notification.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';

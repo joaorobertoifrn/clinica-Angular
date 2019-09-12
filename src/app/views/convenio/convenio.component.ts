@@ -1,6 +1,6 @@
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { LoginService } from '../../../services/login.service';
-import { NotificationService } from '../../util/messages/notification.service';
+import { LoginService } from './../../../services/login.service';
+import { NotificationService } from './../../../util/messages/notification.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Convenio } from '../../../models/convenio.model';

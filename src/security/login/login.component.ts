@@ -1,10 +1,10 @@
-import { FieldMessage } from '../../../models/fieldsmessage';
+import { FieldMessage } from '../../models/fieldsmessage';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { LoginService } from '../../../services/login.service';
+import { LoginService } from '../../services/login.service';
 import { NotificationService } from '../../util/messages/notification.service';
 import { Router } from '@angular/router';
-import { Credenciais } from '../../../models/credenciais.model';
+import { Credenciais } from '../../models/credenciais.model';
 
 @Component({
   selector: 'cli-login',
